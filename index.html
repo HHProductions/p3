@@ -22,7 +22,7 @@
     <!-- Turf Javascript code -->
     <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
 
-    <script type="text/javascript" src="choropleth.js"></script>
+    <script type="text/javascript" src="./static/js/choropleth.js"></script>
 
         <!-- D3 library -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -34,53 +34,47 @@
 
 <body>
 
-  <div class="container">
+<div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h2>Global Gas Emissions Statistics from 2000 to 2020</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="well">
-          <h4>Total Emissions by country</h4>
-          <select id="selDataset"></select>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id = "line"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class = "col-md-6">
-        <div id = "pie"></div>
-      </div>
-      <div class="col-md-6">
-        <div class="well">
-          <h4>Top 5 Emission Countries</h4>
-          <select id="selDataset_1"></select>
-          <canvas id="donut_chart" width="400" height="400"></canvas>
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        </div>
-      </div>
+      
+		<div class="col-sm-6">
+			<h3><a href="index.html">Map View</a></h3>
+		</div>
+		<div class="col-sm-6">
+			<h3><a href="index_Ina.html">Graphical View</a></h3>
+		</div>
+	  </div>
+     
     </div>
 
+  <div class="container">
+	<div class="row">
+      <div class="col-md-12">
+		<div id="map" style="width:1100px;height:450px;"></div>
+	  </div>
+	  <div> .</div>
+	  <div class="col-md-12">
+		<div id="map-id" style="width:1100px;height:450px;"></div>	
+	  </div>	
+		
+		
+	
+
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="./static/js/app.js"></script>
+
+
     <!-- The div where we'll insert our map -->
-    <div id="map" style="width:1500px;height:450px;"></div>
-    <div id="map-id" style="width:1500px;height:450px;"></div>
+
 
 
     <!-- referencing the javascript for 1st map -->
-    <script type="text/javascript" src="mylogic.js"></script>
+    <script type="text/javascript" src="./static/js/mylogic.js"></script>
 
     <!-- referencing the javascript for chloropleth map -->
-    <script type="text/javascript" src="mychloro.js"></script>
-	  <script src="./static/js/app.js"></scr
+    <script type="text/javascript" src="./static/js/mychloro.js"></script>
+
   
 </body>
 
