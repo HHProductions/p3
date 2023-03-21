@@ -3,7 +3,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 import json
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 
 # Database Setup
@@ -36,13 +36,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcome():
-    """List all available api routes."""
-    return (
-        f"/api/v1.0/emissions<br/>"
-        f"/api/countries<br/>"
-        f"/api/polygons<br/>"
-    )
+    """main web page."""
+
+    return render_template("index_Ina.html")
     
+@app.route("/usama")
+def map_view():
+    """2nd web page."""
+
+    return render_template("index.html")    
 ##############################
 
 @app.route("/api/polygons")

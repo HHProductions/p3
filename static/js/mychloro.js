@@ -49,9 +49,9 @@ d3.json(poly_url).then(function(data_poly) {
             valueProperty: "totCO2_2020",
         
             // Set the colour scale.
-            scale: ['#FFEDA0','#FED976','#FEB24C', '#FD8D3C','#FC4E2A','#E31A1C','#BD0026','#ff8080'],
+            scale: ['#FFEDA0','#FED976','#FEB24C', '#FD8D3C','#FC4E2A','#E31A1C','#BD0026','#683535'],
             // The number of breaks in the step range
-            steps: 300,
+            steps: 8,
         
             // q for quartile, e for equidistant, k for k-means
             mode: "q",
@@ -93,7 +93,7 @@ d3.json(poly_url).then(function(data_poly) {
         
           // making a function for color schemes
           function getColor(d) {
-            return d > 1000 ? '#78041b' :
+            return d > 1000 ? '#683535' :
                    d > 500  ? '#BD0026' :
                    d > 200  ? '#E31A1C' :
                    d > 100  ? '#FC4E2A' :
@@ -152,6 +152,7 @@ d3.json(poly_url).then(function(data_poly) {
                   fillOpacity: 1,
                   color: "Black",
                   fillColor: "Black",
+				  fillOpacity: 0.4,
                   radius: data_countries[i].totCO2_2020 * 100
                 }).bindTooltip(marker)
                 );
